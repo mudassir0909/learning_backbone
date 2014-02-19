@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BAD | Backbone Application Development</title>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/underscore-min.js"></script>
+    <script src="scripts/backbone-1.0.0.js"></script>
+  </head>
+  <body>
+    <div id="display">
+      <div class="listing">Some random words...</div>
+    </div>
+    <script id="template-contact" type="template">
+      <div class="contact">
+        <h2><%-firstName%><% if (lastName) { %> <%-lastName%><%}%></h2>
+        <a href="mailto:<%-email%>"><%-email%></a><br/>
+        <a href="tel:<%phoneNumber%>"><%-phoneNumber%></a><br/>
+        <button class="delete">Delete</button>
+      </div>
+    </script>
+  </body>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/models/contact.js"></script>
+  <script src="scripts/collections/contact.js"></script>
+  <script src="scripts/views/contact.js"></script>
+  <script src="scripts/views/directory.js"></script>
+</html>
