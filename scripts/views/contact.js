@@ -3,7 +3,7 @@ App.Views.Contact = Backbone.View.extend({
   $container: null,
 
   initialize: function(options){
-    _.bindAll(this, 'render', 'insert');
+    _.bindAll(this, 'render', 'insert', 'remove');
 
     this.$container = options.$container;
 
@@ -19,5 +19,13 @@ App.Views.Contact = Backbone.View.extend({
 
   insert: function() {
     this.$container.append(this.$el);
+  },
+
+  events:{
+    'click .delete': 'remove'
+  },
+
+  remove: function(){
+    App.Browser.navigate('contact/remove/' + this.model.cid);
   }
 });

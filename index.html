@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="display">
+      <div class="controls">
+        <button class="add">Add new contact</button>
+        <form method="" action="" style="display:none">
+          <input class="firstName" type="text" placeholder="First Name" />
+          <br>
+          <input class="lastName" type="text" placeholder="Last Name" />
+          <br>
+          <input class="email" type="text" placeholder="Email" />
+          <br>
+          <input class="phoneNumber" type="text" placeholder="Phone">
+          <br>
+          <input type="submit" value="Save Contact" />
+        </form>
+      </div>
       <div class="listing">Some random words...</div>
     </div>
     <script id="template-contact" type="template">
@@ -19,7 +33,9 @@
       </div>
     </script>
   </body>
+
   <script src="scripts/main.js"></script>
+  <script src="scripts/router.js"></script>
   <script src="scripts/models/contact.js"></script>
   <script src="scripts/collections/contact.js"></script>
   <script src="scripts/views/contact.js"></script>

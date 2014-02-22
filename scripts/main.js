@@ -3,7 +3,9 @@ var App = {
   Collections: {},
   Views: {},
   Contacts: null,
-  Directory: null
+  Directory: null,
+  Routers: {},
+  Browser: null
 }
 
 $(function(){
@@ -34,4 +36,7 @@ $(function(){
   App.Contacts.on('add remove', function(){
     App.Directory.render();
   });
+
+  App.Browser = new App.Routers.Contact;
+  Backbone.history.start();
 });
