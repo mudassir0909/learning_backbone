@@ -40,6 +40,7 @@ App.Views.Directory = Backbone.View.extend({
 
     if(newContact.isValid()){
       App.Contacts.add(newContact);
+      newContact.save();
       this.addFormHide();
       $('input[type=text]', $form).val('').blur();
     }else{

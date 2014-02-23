@@ -39,4 +39,5 @@ $(function(){
 
   App.Browser = new App.Routers.Contact;
   Backbone.history.start();
+  App.Contacts.fetch();
 });

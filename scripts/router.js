@@ -15,7 +15,8 @@ App.Routers.Contact = Backbone.Router.extend({
   },
 
   contactsRemove: function(id){
-    App.Contacts.remove(id);
+    var contact = App.Contacts.get(id);
+    contact && contact.destroy();
     App.Directory.addFormHide();
   }
 });
